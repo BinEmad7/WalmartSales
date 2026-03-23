@@ -1,0 +1,2 @@
+SELECT *
+From Walmart;
