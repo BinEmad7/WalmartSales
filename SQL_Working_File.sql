@@ -18,14 +18,14 @@ GROUP BY city
 HAVING COUNT(DISTINCT branch) > 1
 ;
 
--- Top City by Total Revenue (Weslaco, Waxahachie, Plano, San Antonio, Port Arthur)
+-- Top 5 Cities by Total Revenue (Weslaco, Waxahachie, Plano, San Antonio, Port Arthur)
 SELECT city, SUM(total_price) Total_Revenue
 FROM Walmart
 GROUP BY city
 ORDER BY SUM(total_price) DESC
 ;
 
--- Top Branch by Total Revenue (WALM009, WALM074, WALM003, WALM058, WALM030)
+-- Top 5 Branches by Total Revenue (WALM009, WALM074, WALM003, WALM058, WALM030)
 SELECT branch, SUM(total_price) Total_Revenue
 FROM Walmart
 GROUP BY branch
