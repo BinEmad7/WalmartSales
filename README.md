@@ -162,5 +162,4 @@ Advanced SQL queries were utilized to extract deep-tier business intelligence:
 
 # Author
 
-**Your Name**
-[Link to LinkedIn/Portfolio]
+**Ahmed Alsharif**
