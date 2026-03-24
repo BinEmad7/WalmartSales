@@ -1,165 +1,201 @@
 # 🛒 Walmart Sales & Interactive Analytics
 
-This project analyzes Walmart retail sales data containing **9,969 transactions** using **SQL for database-level business intelligence** and **Python (Streamlit) for interactive data visualization and exploratory analysis**.
+This project analyzes Walmart retail sales data containing **9,969 transactions** across 5 years using **SQL for advanced business intelligence** and **Python (Streamlit)** for interactive dashboarding and exploratory data analysis.
 
-The goal is to transform raw transactional data into **actionable business insights** related to:
-
-*   Financial performance and profitability
-*   Category efficiency and margin analysis
-*   Hourly traffic and seasonal sales patterns
-*   Customer behavior and payment preferences
-*   Store and branch performance across 98 cities
+The goal is to transform raw transactional data into **actionable business insights** related to financial performance, operational efficiency, and customer behavior.
 
 ---
 
-# Data Structure
+# 📊 Visual Showcase: Key Insights
 
-The project analyzes a comprehensive dataset with 13 key attributes representing retail operations.
+## 1. Macro Trend: Revenue vs. Profit Growth
 
-| Column Name      | Description                                           |
-| ---------------- | ----------------------------------------------------- |
-| invoice_id       | Unique identifier for each transaction                |
-| branch           | Unique identifier for the store branch (100 branches) |
-| city             | City where the branch is located (98 cities)          |
-| category         | Product category (Food, Fashion, Electronics, etc.)   |
-| unit_price       | Price of a single unit of the product                 |
-| quantity         | Number of units purchased                             |
-| date             | Date of the transaction                               |
-| time             | Time of the transaction                               |
-| payment_method   | Method used (Cash, E-wallet, Credit card)             |
-| rating           | Customer satisfaction rating (1–10)                   |
-| profit_margin    | Percentage of profit on the transaction               |
-| total_price      | Total revenue from the sale (Price × Quantity)        |
-| profit           | Total profit earned from the sale                     |
+![Revenue Trend](images/Total_Revenue_vs_Profit_by_Month.png)
+
+**💡 Insight:**
+A near-perfect correlation (**0.9487**) between revenue and profit indicates highly stable margins. A **recurring spike every January 12th** suggests a strong annual promotional event.
 
 ---
 
-# How to Run
+## 2. Category Efficiency: The Core Engines
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/BinEmad7/WalmartSales/tree/main
-    ```
+![Category Performance](images/Total_Revenue_vs_Profit_by_Category.png)
 
-2.  **Install Dependencies**
-    ```bash
-    pip install pandas seaborn matplotlib streamlit
-    ```
-
-3.  **Run the Interactive Dashboard**
-    ```bash
-    streamlit run app.py
-    ```
-
-4.  **Execute SQL Queries**
-    Open the provided `.sql` file in your preferred SQL editor (PostgreSQL/MySQL/SQL Server) to run the business logic queries.
+**💡 Insight:**
+**Fashion Accessories** and **Home & Lifestyle** generate nearly **$1M** combined revenue and act as the **primary volume drivers** of the business.
 
 ---
 
-# Business Questions & Objectives
+## 3. Operations: Peak Traffic Windows
 
-This project aims to answer critical questions regarding **operational efficiency and revenue growth**.
+![Hourly Trends](images/Number_of_Transactions_by_Hour.png)
+
+**💡 Insight:**
+Traffic surges after 11:00 AM, peaking at **15:00 (3 PM)** — the most critical staffing window.
+
+---
+
+## 4. Customer Behavior: Payment Preferences
+
+![Payment Methods](images/Number_of_Transactions_and_Total_Revenue_by_Payment_Methods.png)
+
+**💡 Insight:**
+**Credit Cards generate the highest revenue ($488K)**, indicating use for high-value purchases, while E-wallets dominate smaller transactions.
+
+---
+
+# 📌 Business Objectives
 
 ### Sales & Financials
-*   What is the **Total Revenue and Profit** across the 5-year span?
-*   What are the **quarterly and yearly revenue trends**?
-*   How strong is the **correlation between sales volume (Quantity) and Profit**?
 
-### Operational Trends
-*   What is the **Peak Shopping Hour** to optimize staffing levels?
-*   Which **days of the week** drive the most revenue?
-*   Is there a recurring **seasonal anomaly** in the daily sales data?
+* Revenue trends over time
+* Profit vs revenue drivers
+* Impact of **Quantity vs Unit Price**
 
-### Category & Product Performance
-*   Which categories act as **Volume Engines** vs. **High-Ticket Drivers**?
-*   Which categories maintain the **highest customer satisfaction (ratings)**?
-*   What is the **Aggregate Margin** of essential vs. luxury goods?
+### Operations
 
-### Customer & Store Insights
-*   Which **payment methods** are preferred for high-value transactions?
-*   Which **cities and branches** are the top revenue contributors?
-*   Does transaction size impact **customer ratings**?
+* Peak shopping hours
+* Best-performing days
+
+### Customer & Product Insights
+
+* Customer satisfaction (ratings)
+* Average Transaction Value (ATV)
+* Category efficiency
 
 ---
 
-# Data Processing & Analysis
+# 🗄️ Data Structure
 
-The dataset was processed using **Python (Pandas)** and **SQL** to ensure high data integrity:
-
-*   **Feature Engineering:** Created `hour`, `month`, `year`, and `day_of_week` columns from timestamp data.
-*   **Metric Calculation:** Developed the **Profitability Index** and **Aggregate Margin** formulas.
-*   **Data Cleaning:** Standardized column naming conventions and handled datetime conversions.
-*   **Normalization:** Categorized days of the week to ensure chronological sorting in visualizations.
-
----
-
-# Visual Showcase
-
-These charts are generated from the Streamlit Interactive Dashboard and Python Analysis.
-
----
-
-## 1. Monthly Revenue vs. Profit Trends
-![Monthly Trend](https://via.placeholder.com/800x300?text=Monthly+Revenue+vs+Profit+Trend+Chart)
-**Insight:** 
-Analysis reveals a consistent growth pattern with massive recurring spikes every **mid-January (specifically Jan 12th)**. This suggests a highly successful annual New Year promotion or restock event.
+| Column         | Description           |
+| -------------- | --------------------- |
+| invoice_id     | Unique transaction ID |
+| branch         | Store branch          |
+| city           | Store city            |
+| category       | Product category      |
+| unit_price     | Price per unit        |
+| quantity       | Units sold            |
+| date           | Transaction date      |
+| time           | Transaction time      |
+| payment_method | Payment type          |
+| rating         | Customer rating       |
+| profit_margin  | Profit percentage     |
+| total_price    | Revenue               |
+| profit         | Net profit            |
 
 ---
 
-## 2. Category Efficiency: Volume vs. Value
-![Category Analysis](https://via.placeholder.com/800x300?text=Category+Efficiency+Analysis+Chart)
-**Insight:** 
-**Fashion and Home** items are the store's "Core Engines," making up **90% of foot traffic** but with lower ticket sizes ($108). Conversely, **Sports and Food** items are low-volume but high-ticket ($316), representing a significant cross-selling opportunity.
+# 📈 Executive Summary
+
+### 💰 Financial Performance
+
+* **Revenue:** $1,209,726
+* **Profit:** $476,139
+* **Correlation (Revenue vs Profit):** **0.9487**
+
+### 🔥 Key Drivers
+
+* **Quantity → Profit (0.7565)** → strongest driver
+* Business is **volume-based, not price-based**
+
+### 🏆 Category Insights
+
+* **Top Volume:** Fashion & Home
+* **Highest Ratings:** Food & Beverages (~7.11)
+* **Best Margins:** Essential goods (~40%)
+
+### ⏱️ Operational Insights
+
+* **Peak Hour:** 15:00
+* **Best Day:** Tuesday
+* **Seasonality:** Mid-January spike
 
 ---
 
-## 3. Hourly Transaction Volume
-![Hourly Trend](https://via.placeholder.com/800x300?text=Hourly+Traffic+Volume+Chart)
-**Insight:** 
-The store experiences a sharp surge starting at 11:00 AM, reaching a **Daily Peak at 15:00 (3 PM)**. This identifies the most critical window for floor staffing and checkout management.
+# 📊 Category Performance
+
+| Category            | Revenue | Profit | Rating   |
+| ------------------- | ------- | ------ | -------- |
+| Fashion accessories | $489K   | $192K  | 5.78     |
+| Home & lifestyle    | $489K   | $192K  | 5.74     |
+| Food & beverages    | $53K    | $21K   | **7.11** |
+| Health & beauty     | $46K    | $18K   | 7.00     |
 
 ---
 
-# Executive Summary (Main Findings)
+# 📅 Time-Based Insights
 
-### Strategic Growth
-Total Revenue reached **$1,209,726.38** with a profit of **$476,139.43**. A near-perfect correlation (0.9487) between Total Price and Profit indicates highly stable and predictable pricing margins across the board.
+### Peak Hours
 
-### The Volume Engine
-Profitability is driven primarily by **Quantity (0.7565 correlation)**. High-frequency sales in Fashion and Home accessories dictate the bottom line, proving that Walmart's model remains volume-dependent.
+* **15:00 → highest traffic**
+* Afternoon dominates sales
 
-### Customer Loyalty
-**Food & Beverages** and **Health & Beauty** are the "Customer Favorites," boasting the highest average ratings (~7.11) and the strongest aggregate margins (40.3%). These "Essential Goods" are the primary drivers of customer retention.
+### Weekly Performance
 
-### Operational Peaks
-**Tuesday** is the highest revenue-generating day of the week, while **Monday** consistently sees the lowest traffic.
+* **Tuesday → best day**
+* **Monday → lowest**
 
----
+### Monthly Trends
 
-# SQL Analytics Highlights
-
-Advanced SQL queries were utilized to extract deep-tier business intelligence:
-*   **City Performance:** Identified **Weslaco and Waxahachie** as the top revenue-generating cities.
-*   **Payment Preferences:** Analyzed how **Credit Card** transactions drive the highest revenue ($488K) compared to Cash and E-wallet.
-*   **Branch Metrics:** Ranked the top 100 branches by efficiency and unit sales.
-*   **Transaction Volume:** Aggregated unit sales per category, revealing **Fashion Accessories** as the volume leader with 9,653 units sold.
+* Strong spikes in **January, November, December**
 
 ---
 
-# Technologies Used
+# 📈 Correlation Insights
 
-**SQL (PostgreSQL)**
-*   Data Aggregation & Filtering
-*   City/Branch Performance Ranking
-*   Named Aggregations
+| Metric      | Profit Correlation |
+| ----------- | ------------------ |
+| Quantity    | **0.7565**         |
+| Unit Price  | 0.5007             |
+| Total Price | **0.9487**         |
 
-**Python**
-*   **Streamlit:** For building the interactive web dashboard.
-*   **Pandas:** For data manipulation and cleaning.
-*   **Seaborn/Matplotlib:** For statistical data visualization.
+**Conclusion:**
+👉 Profit is driven mainly by **sales volume**, not pricing.
 
 ---
 
-# Author
+# 🛠️ Technologies Used
 
-**Ahmed Alsharif**
+* **SQL (PostgreSQL)** → Aggregation & business logic
+* **Python (Pandas)** → Data processing
+* **Streamlit** → Dashboard
+* **Seaborn & Matplotlib** → Visualization
+
+---
+
+# 🚀 How to Run
+
+```bash
+git clone https://github.com/BinEmad7/WalmartSales.git
+cd WalmartSales
+pip install pandas seaborn matplotlib streamlit
+streamlit run app.py
+```
+
+---
+
+# 📊 Available Visualizations
+
+Located in `/images`:
+
+* Revenue vs Profit (Month / Year / Day)
+* Category Performance
+* Hourly Transactions
+* Payment Analysis
+* Revenue Distribution
+
+---
+
+# 🎯 Key Takeaways
+
+* Business is **volume-driven**
+* **Fashion & Home** dominate traffic
+* **Essential goods drive loyalty**
+* Strong **seasonal pattern (January spike)**
+* Peak operations must focus on **afternoon hours**
+
+---
+
+# 👤 Author
+
+Ahmed Alsharif
