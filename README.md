@@ -135,7 +135,7 @@ Fashion & Home dominate (≈9,600 units each)
 
 # 🛠️ Technologies Used
 
-* SQL (PostgreSQL)
+* SQL (SQL Server)
 * Python (Pandas)
 * Streamlit
 * Seaborn & Matplotlib
