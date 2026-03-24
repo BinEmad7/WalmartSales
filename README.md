@@ -38,7 +38,7 @@ The project analyzes a comprehensive dataset with 13 key attributes representing
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/YourUsername/walmart_sales_analysis.git
+    git clone [https://github.com/YourUsername/walmart_sales_analysis.git](https://github.com/BinEmad7/WalmartSales/tree/main)
     ```
 
 2.  **Install Dependencies**
