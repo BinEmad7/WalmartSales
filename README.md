@@ -53,6 +53,9 @@ More charts are available in the `/images` folder, including:
 - Revenue Distribution by Category
 - Average Transaction Value by Category
 
+
+🔗 Full Interactive Dashboard (Streamlit)
+
 ---
 
 # 📌 Business Objectives
