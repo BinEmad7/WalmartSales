@@ -42,6 +42,17 @@ Traffic surges after 11:00 AM, peaking at **15:00 (3 PM)** — the most critical
 **💡 Insight:**
 **Credit Cards generate the highest revenue ($488K)**, indicating use for high-value purchases.
 
+## 📊 Full Dashboard & Additional Visualizations
+
+
+More charts are available in the `/images` folder, including:
+
+- Revenue vs Profit by Day
+- Revenue vs Profit by Year
+- Revenue vs Profit by Day of Week
+- Revenue Distribution by Category
+- Average Transaction Value by Category
+
 ---
 
 # 📌 Business Objectives
@@ -62,17 +73,6 @@ Traffic surges after 11:00 AM, peaking at **15:00 (3 PM)** — the most critical
 * Customer satisfaction (ratings)
 * Average Transaction Value (ATV)
 * Category efficiency
-
-
-## 📊 Full Dashboard & Additional Visualizations
-
-More charts are available in the `/images` folder, including:
-
-- Revenue vs Profit by Day
-- Revenue vs Profit by Year
-- Revenue vs Profit by Day of Week
-- Revenue Distribution by Category
-- Average Transaction Value by Category
 
 ---
 
