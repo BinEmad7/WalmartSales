@@ -40,7 +40,7 @@ Traffic surges after 11:00 AM, peaking at **15:00 (3 PM)** — the most critical
 ![Payment Methods](images/Number_of_Transactions_and_Total_Revenue_by_Payment_Methods.png)
 
 **💡 Insight:**
-**Credit Cards generate the highest revenue ($488K)**, indicating use for high-value purchases, while E-wallets dominate smaller transactions.
+**Credit Cards generate the highest revenue ($488K)**, indicating use for high-value purchases.
 
 ---
 
@@ -91,75 +91,54 @@ Traffic surges after 11:00 AM, peaking at **15:00 (3 PM)** — the most critical
 
 * **Revenue:** $1,209,726
 * **Profit:** $476,139
-* **Correlation (Revenue vs Profit):** **0.9487**
+* **Correlation:** **0.9487**
 
 ### 🔥 Key Drivers
 
-* **Quantity → Profit (0.7565)** → strongest driver
-* Business is **volume-based, not price-based**
-
-### 🏆 Category Insights
-
-* **Top Volume:** Fashion & Home
-* **Highest Ratings:** Food & Beverages (~7.11)
-* **Best Margins:** Essential goods (~40%)
-
-### ⏱️ Operational Insights
-
-* **Peak Hour:** 15:00
-* **Best Day:** Tuesday
-* **Seasonality:** Mid-January spike
+* Quantity drives profit (**0.7565**)
+* Business is **volume-based**
 
 ---
 
-# 📊 Category Performance
+# 🧠 SQL Analytics (Key Insights)
 
-| Category            | Revenue | Profit | Rating   |
-| ------------------- | ------- | ------ | -------- |
-| Fashion accessories | $489K   | $192K  | 5.78     |
-| Home & lifestyle    | $489K   | $192K  | 5.74     |
-| Food & beverages    | $53K    | $21K   | **7.11** |
-| Health & beauty     | $46K    | $18K   | 7.00     |
+### 🌍 Geographic Insights
 
----
+* 98 Cities | 100 Branches
+* Multi-branch cities: **Weslaco, Waxahachie**
 
-# 📅 Time-Based Insights
+### 🏆 Top Cities
 
-### Peak Hours
+Weslaco, Waxahachie, Plano, San Antonio, Port Arthur
 
-* **15:00 → highest traffic**
-* Afternoon dominates sales
+### 🏪 Top Branches
 
-### Weekly Performance
+WALM009, WALM074, WALM003, WALM058, WALM030
 
-* **Tuesday → best day**
-* **Monday → lowest**
+### 📦 Category Volume
 
-### Monthly Trends
+Fashion & Home dominate (≈9,600 units each)
 
-* Strong spikes in **January, November, December**
+### 💳 Payment Insights
+
+* Credit Card → highest revenue ($488K)
+* E-wallet → high frequency
+* Cash → lowest
 
 ---
 
-# 📈 Correlation Insights
+# 🧮 SQL Queries Used
 
-| Metric      | Profit Correlation |
-| ----------- | ------------------ |
-| Quantity    | **0.7565**         |
-| Unit Price  | 0.5007             |
-| Total Price | **0.9487**         |
-
-**Conclusion:**
-👉 Profit is driven mainly by **sales volume**, not pricing.
+(See project `.sql` file for full queries)
 
 ---
 
 # 🛠️ Technologies Used
 
-* **SQL (PostgreSQL)** → Aggregation & business logic
-* **Python (Pandas)** → Data processing
-* **Streamlit** → Dashboard
-* **Seaborn & Matplotlib** → Visualization
+* SQL (PostgreSQL)
+* Python (Pandas)
+* Streamlit
+* Seaborn & Matplotlib
 
 ---
 
@@ -171,28 +150,6 @@ cd WalmartSales
 pip install pandas seaborn matplotlib streamlit
 streamlit run app.py
 ```
-
----
-
-# 📊 Available Visualizations
-
-Located in `/images`:
-
-* Revenue vs Profit (Month / Year / Day)
-* Category Performance
-* Hourly Transactions
-* Payment Analysis
-* Revenue Distribution
-
----
-
-# 🎯 Key Takeaways
-
-* Business is **volume-driven**
-* **Fashion & Home** dominate traffic
-* **Essential goods drive loyalty**
-* Strong **seasonal pattern (January spike)**
-* Peak operations must focus on **afternoon hours**
 
 ---
 
